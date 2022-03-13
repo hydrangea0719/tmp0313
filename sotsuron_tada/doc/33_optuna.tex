@@ -1,0 +1,24 @@
+%\newpage
+%\changeindent{0cm}
+%\section{要素技術}
+%\changeindent{2cm}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 3.1. BERT
+% 3.2 Optuna
+% 3.3 SARC データセット
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Optuna}
+% https://www.preferred.jp/ja/projects/optuna/
+% https://github.com/optuna/optuna
+% https://arxiv.org/pdf/1907.10902.pdf
+% https://tech.preferred.jp/ja/blog/optuna-release/
+
+
+Optuna \cite{akiba2019optuna} は，オープンソースのハイパーパラメータ自動最適化フレームワークである．
+Tree-structured Parzen Estimator というベイズ最適化アルゴリズムを用いて，過去の試行に基づいて有望そうな領域を推定し再度試行する．
+これを繰り返すことで最適なハイパーパラメータの値を自動的に発見する．
+使用する際は目的関数を定め，その値がより大きくまたは小さくなるように推定を進める．
+Optuna の主な特徴として，Define-and-Run スタイルの API，学習曲線を用いた試行の枝刈り，並列分散最適化が挙げられる．
+

@@ -1,0 +1,104 @@
+\documentclass[12pt]{jarticle}
+%\documentclass[12pt, draft]{jarticle}  % 図の出力を省略．最後に直す．
+%\documentstyle[12pt,fleqn,epsf,iepaper,cite]{jarticle}
+%\documentstyle[12pt,iepaper,eclepsf,oddchar]{jarticle}
+\usepackage[dvipdfm]{graphicx}
+\usepackage{iepaper}
+\usepackage{epsf}
+\usepackage{ccaption}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% added by tada
+\usepackage{url}
+\usepackage{multirow}
+\usepackage{afterpage}
+%\usepackage[hang,small,bf]{caption}
+\usepackage[subrefformat=parens]{subcaption}
+\captionsetup{compatibility=false}
+% end
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% タイトル改行した方が良い？
+\title{皮肉データセットを用いた深層学習による\\皮肉推定手法}
+\author{多田 瑞葵}
+\gakuseki{1181201087}[B]  %\UTF{FFFD}\UTF{FFFD}\UTF{FFFD}_\UTF{FFFD}\UTF{FFFD}B\UTF{FFFD}C\UTF{FFFD}C\UTF{FFFD}_\UTF{FFFD}\UTF{FFFD}M  gakubu = B, syuushi = M ?
+\group{第 1 研究グループ}            % \UTF{FFFD}\UTF{FFFD}\UTF{FFFD}_\CID{1466}\UTF{A347}%
+\shidou{森 直樹 教授}                          % \UTF{FFFD}\UTF{FFFD}\UTF{FFFD}_\CID{1466}\UTF{A347}%
+%\syusa{\UTF{FFFD}\UTF{FFFD}\UTF{FFFD}\UTF{FFFD}}                            % \UTF{FFFD}C\UTF{FFFD}_\CID{1466}\UTF{A347}%
+%\hukusa{\UTF{FFFD}\UTF{FFFD}\UTF{FFFD}\UTF{FFFD}}{\UTF{FFFD}\UTF{FFFD}\UTF{FFFD}\UTF{FFFD}}
+
+%\UTF{FFFD}}\UTF{FFFD}\UTF{050D}\UTF{FFFD}\UTF{FFFD}\UTF{FFFD}\UTF{FFFD}u(section\UTF{FFFD}\UTF{050D}\UTF{FFFD}).(\UTF{FFFD}}\UTF{FFFD}\UTF{050D}\UTF{FFFD})\UTF{FFFD}v\UTF{FFFD}\UTF{0182}\UTF{FFFD}\UTF{FFFD}\UTF{90BD}\UTF{FFFD}\UTF{FFFD}%
+\makeatletter
+ \renewcommand{\thefigure}{%
+   \thesection.\arabic{figure}}
+  \@addtoreset{figure}{section}
+\makeatother
+
+\makeatletter
+ \renewcommand{\thetable}{%
+   \thesection.\arabic{table}}
+  \@addtoreset{table}{section}
+\makeatother
+
+\makeatletter
+ \renewcommand{\theequation}{%
+   \thesection.\arabic{equation}}
+  \@addtoreset{equation}{section}
+\makeatother
+
+
+\begin{document}
+\maketitle
+\pagenumbering{roman}  % page numbering i, ii
+%%% \UTF{FFFD}\UTF{068E}\UTF{FFFD}%
+\tableofcontents  % mokuji
+\newpage
+%
+
+%% \UTF{FFFD}}\UTF{FFFD}\UTF{A5D7}%
+\listoffigures  % zu ichiran
+\newpage
+
+%% \UTF{FFFD}\\UTF{FFFD}\UTF{A5D7}%
+ \listoftables  % hyou ichiran
+ \newpage
+
+\pagenumbering{arabic}  % page numbering 1, 2
+
+% \UTF{FFFD}\UTF{FFFD}\UTF{FFFD}\UTF{FFFD}\UTF{FFFD}J\UTF{FFFD}n
+%\include{./doc/99_memo}  % memo, ato de sakujo suru
+%\clearpage
+
+% 1. introduction
+\include{./doc/10_introduction}
+\clearpage
+
+%% 2. previous research
+\include{./doc/20_pre_research}
+\clearpage
+
+% 3. method
+\include{./doc/31_bert}
+\include{./doc/33_optuna}
+\include{./doc/32_dataset}
+\clearpage
+
+% 4. experimental results
+\include{./doc/40_jikken}
+\clearpage
+
+% 5. conclusion
+\include{./doc/conclusion}
+
+% shaji
+\clearpage
+\include{./doc/shaji}  % shaji
+
+% References
+\clearpage
+\include{./doc/bibliography}
+
+
+\end{document}
